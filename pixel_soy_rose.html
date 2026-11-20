@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Pixel Soy Rose: páginas web, diseño gráfico, redes sociales y automatización con inteligencia artificial.">
+  <title>Pixel Soy Rose | Agencia Digital</title>
+  <style>
+    :root{--bg:#080d1b;--panel:#101a30;--panel2:#14213b;--text:#f5f7ff;--muted:#aab5cc;--blue:#54b8ff;--violet:#9b7bff;--green:#35d39a;--line:rgba(255,255,255,.11)}
+    *{box-sizing:border-box} html{scroll-behavior:smooth} body{margin:0;background:var(--bg);color:var(--text);font-family:Inter,ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;line-height:1.6}
+    a{color:inherit;text-decoration:none}.wrap{width:min(1120px,92%);margin:auto}
+    header{position:sticky;top:0;z-index:10;background:rgba(8,13,27,.88);backdrop-filter:blur(16px);border-bottom:1px solid var(--line)}
+    nav{height:76px;display:flex;align-items:center;justify-content:space-between;gap:18px}.brand{display:flex;align-items:center;gap:11px;font-weight:850;letter-spacing:-.5px}.logo{width:40px;height:40px;border-radius:13px;background:linear-gradient(135deg,var(--blue),var(--violet));display:grid;place-items:center;color:#07101e;font-weight:950;font-size:20px;box-shadow:0 8px 28px #557cff44}
+    .brand span small{display:block;font-size:10px;letter-spacing:2px;color:var(--muted);font-weight:700}.links{display:flex;gap:25px;color:var(--muted);font-size:14px}.links a:hover{color:white}
+    .btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;padding:12px 19px;border-radius:12px;font-weight:750;border:1px solid transparent;cursor:pointer;transition:.2s;font:inherit;font-weight:750}
+    .primary{background:linear-gradient(100deg,var(--blue),var(--violet));color:#07101e}.primary:hover{transform:translateY(-2px);filter:brightness(1.08)}.secondary{border-color:var(--line);background:#ffffff09;color:white}.secondary:hover{background:#ffffff14}
+    .hero{padding:94px 0 78px;position:relative;overflow:hidden}.hero:before{content:"";position:absolute;width:520px;height:520px;border-radius:50%;background:#6a6dff20;filter:blur(80px);right:-120px;top:-160px;pointer-events:none}
+    .hero-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:50px;align-items:center;position:relative}.eyebrow{display:inline-flex;gap:8px;align-items:center;border:1px solid #54b8ff55;color:#9bd9ff;background:#54b8ff12;padding:7px 12px;border-radius:99px;font-size:12px;font-weight:800;letter-spacing:1px;text-transform:uppercase}
+    h1{font-size:clamp(42px,6vw,68px);line-height:1.04;letter-spacing:-3px;margin:22px 0}.gradient{background:linear-gradient(100deg,#69d2ff,#aa8cff);-webkit-background-clip:text;background-clip:text;color:transparent}
+    .lead{font-size:18px;color:var(--muted);max-width:600px}.actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:28px}.micro{font-size:12px;color:var(--muted);margin-top:18px}
+    .hero-card{background:linear-gradient(145deg,#172744,#10182b);border:1px solid var(--line);border-radius:26px;padding:24px;box-shadow:0 25px 80px #0006;transform:rotate(1deg)}
+    .mock-top{display:flex;align-items:center;justify-content:space-between;color:var(--muted);font-size:12px}.dots{display:flex;gap:5px}.dots i{width:7px;height:7px;border-radius:50%;background:#6e7b96}
+    .mock-screen{margin-top:22px;border-radius:18px;background:#0b1325;padding:22px;min-height:275px;border:1px solid var(--line)}.mock-tag{color:#80d3ff;font-size:11px;font-weight:800;letter-spacing:1px}.mock-screen h3{font-size:27px;line-height:1.15;margin:12px 0}.mock-screen p{font-size:13px;color:var(--muted)}.mock-bars{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:20px}.mock-bars div{height:65px;border-radius:12px;background:linear-gradient(135deg,#2d6d9e66,#8b70ce66);border:1px solid #ffffff12}
+    section{padding:76px 0}.section-head{text-align:center;max-width:700px;margin:0 auto 38px}.kicker{color:#85d5ff;text-transform:uppercase;letter-spacing:2px;font-size:11px;font-weight:850}.section-head h2{font-size:clamp(30px,4vw,43px);line-height:1.15;letter-spacing:-1.5px;margin:10px 0}.section-head p{color:var(--muted)}
+    .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:17px}.card{background:linear-gradient(150deg,#121f38,#0e1729);border:1px solid var(--line);border-radius:19px;padding:23px;transition:.2s}.card:hover{transform:translateY(-4px);border-color:#69c5ff66}.icon{width:45px;height:45px;border-radius:13px;background:#54b8ff18;display:grid;place-items:center;font-size:22px;margin-bottom:15px}.card h3{margin:0 0 8px;font-size:18px}.card p{margin:0;color:var(--muted);font-size:14px}.price{font-size:26px;font-weight:850;margin-top:17px}.price small{font-size:12px;color:var(--muted);font-weight:500}.note{font-size:12px;color:var(--muted);text-align:center;margin-top:20px}
+    .how{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}.step{padding:22px;border-left:2px solid #7f9cff;background:#ffffff06;border-radius:0 15px 15px 0}.step b{color:#8edaff;font-size:13px}.step h3{margin:8px 0}.step p{margin:0;color:var(--muted);font-size:14px}
+    .cta{background:linear-gradient(110deg,#142e4b,#29224b);border:1px solid var(--line);border-radius:25px;padding:42px;display:flex;align-items:center;justify-content:space-between;gap:25px}.cta h2{margin:0 0 8px;font-size:32px}.cta p{margin:0;color:var(--muted)}
+    footer{padding:35px 0;border-top:1px solid var(--line);color:var(--muted);font-size:13px}.foot{display:flex;justify-content:space-between;gap:15px;flex-wrap:wrap}
+    /* Chat assistant */
+    .chat-launch{position:fixed;right:22px;bottom:22px;z-index:30;border:0;border-radius:50px;padding:14px 19px;background:linear-gradient(100deg,var(--blue),var(--violet));color:#07101e;font-weight:850;box-shadow:0 12px 35px #0008;cursor:pointer}
+    .chat{position:fixed;right:22px;bottom:86px;width:min(370px,calc(100vw - 28px));height:520px;max-height:calc(100vh - 120px);background:#101a30;border:1px solid #ffffff25;border-radius:20px;z-index:31;display:none;flex-direction:column;overflow:hidden;box-shadow:0 25px 80px #000a}
+    .chat.open{display:flex}.chat-head{padding:16px;background:linear-gradient(100deg,#17456b,#392b68);display:flex;justify-content:space-between;align-items:center}.chat-head strong{display:block}.chat-head small{color:#d5e5ff}.close{background:#ffffff20;border:0;color:white;border-radius:8px;padding:6px 10px;cursor:pointer}
+    .messages{padding:15px;overflow:auto;flex:1;display:flex;flex-direction:column;gap:10px}.msg{max-width:88%;padding:10px 12px;border-radius:13px;font-size:13px;white-space:pre-wrap}.bot{background:#1c2b47;align-self:flex-start}.user{background:#315e8a;align-self:flex-end}.chat-actions{padding:12px;border-top:1px solid var(--line);display:grid;gap:8px}.chat-actions input{width:100%;background:#0b1325;border:1px solid var(--line);border-radius:10px;padding:11px;color:white;outline:none}.chat-actions button{width:100%;border:0;border-radius:10px;padding:11px;background:linear-gradient(100deg,var(--blue),var(--violet));font-weight:850;cursor:pointer;color:#07101e}.chat-actions .wa{background:#25d366;color:#062515}.chat-hint{font-size:10px;color:var(--muted);text-align:center}
+    @media(max-width:800px){.links{display:none}.hero{padding:65px 0}.hero-grid{grid-template-columns:1fr;gap:35px}.hero-card{max-width:520px}.cards{grid-template-columns:1fr 1fr}.how{grid-template-columns:1fr}.cta{display:block;padding:28px}.cta .btn{margin-top:20px}}
+    @media(max-width:520px){.cards{grid-template-columns:1fr}.hero h1{letter-spacing:-2px}.cta h2{font-size:26px}.chat-launch{right:14px;bottom:14px}.chat{right:14px;bottom:76px}}
+  </style>
+</head>
+<body>
+<header>
+  <div class="wrap">
+    <nav>
+      <a class="brand" href="#inicio"><div class="logo">PSR</div><span>PIXEL SOY ROSE<small>CREATIVA · AGENCIA DIGITAL</small></span></a>
+      <div class="links"><a href="#servicios">Servicios</a><a href="#precios">Precios</a><a href="#proceso">Cómo trabajamos</a><a href="#contacto">Contacto</a></div>
+      <a class="btn secondary" href="#contacto">Solicitar cotización ↗</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="hero" id="inicio">
+    <div class="wrap hero-grid">
+      <div>
+        <div class="eyebrow">✦ Creatividad que impulsa negocios</div>
+        <h1>Tu negocio merece una presencia <span class="gradient">digital extraordinaria.</span></h1>
+        <p class="lead">Creamos páginas web, marcas y contenido que conectan con tus clientes. Integramos inteligencia artificial para que tu negocio pueda atender mensajes de forma más ágil.</p>
+        <div class="actions">
+          <a class="btn primary" href="#precios">Ver servicios y precios →</a>
+          <button class="btn secondary" onclick="openChat()">Hablar con el asistente ✦</button>
+        </div>
+        <p class="micro">Diseño · Tecnología · Estrategia · Atención inteligente</p>
+      </div>
+      <div class="hero-card">
+        <div class="mock-top"><span>PIXEL SOY ROSE / DIGITAL STUDIO</span><span class="dots"><i></i><i></i><i></i></span></div>
+        <div class="mock-screen">
+          <div class="mock-tag">HAZ CRECER TU MARCA</div>
+          <h3>Ideas creativas.<br><span class="gradient">Resultados digitales.</span></h3>
+          <p>Una solución digital completa para llevar tu negocio al siguiente nivel.</p>
+          <div class="mock-bars"><div></div><div></div><div></div><div></div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="servicios">
+    <div class="wrap">
+      <div class="section-head"><div class="kicker">Lo que hacemos</div><h2>Servicios para hacer crecer tu negocio</h2><p>Desde la identidad visual hasta la automatización de la atención al cliente. Todo en un mismo equipo.</p></div>
+      <div class="cards" id="serviceCards"></div>
+    </div>
+  </section>
+
+  <section id="precios">
+    <div class="wrap">
+      <div class="section-head"><div class="kicker">Planes y precios</div><h2>Elige lo que tu negocio necesita</h2><p>Precios iniciales de referencia. Podemos adaptar cada proyecto de acuerdo con tus objetivos y necesidades.</p></div>
+      <div class="cards" id="priceCards"></div>
+      <p class="note">Los precios son editables y están expresados en pesos mexicanos (MXN). La cotización final se confirma según el alcance del proyecto.</p>
+    </div>
+  </section>
+
+  <section id="proceso">
+    <div class="wrap">
+      <div class="section-head"><div class="kicker">Proceso sencillo</div><h2>De la idea al lanzamiento</h2><p>Te acompañamos durante cada etapa para que sepas qué sigue y qué necesitas.</p></div>
+      <div class="how">
+        <div class="step"><b>01 / NOS CUENTAS</b><h3>Conocemos tu idea</h3><p>Nos explicas qué hace tu negocio, qué necesitas y cuál es tu objetivo.</p></div>
+        <div class="step"><b>02 / PROPONEMOS</b><h3>Preparamos tu propuesta</h3><p>Definimos el servicio, los tiempos y una cotización clara antes de comenzar.</p></div>
+        <div class="step"><b>03 / LO HACEMOS REALIDAD</b><h3>Diseñamos y entregamos</h3><p>Desarrollamos tu proyecto y te mantenemos al tanto de los avances.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contacto">
+    <div class="wrap">
+      <div class="cta">
+        <div><h2>¿Listo para impulsar tu negocio?</h2><p>Cuéntanos qué necesitas. Nuestro asistente puede orientarte y después podrás continuar directamente por WhatsApp.</p></div>
+        <button class="btn primary" onclick="openChat()">Iniciar conversación ↗</button>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer><div class="wrap foot"><span>© <span id="year"></span> Pixel Soy Rose. Todos los derechos reservados.</span><span>Creatividad + tecnología para tu negocio.</span></div></footer>
+
+<button class="chat-launch" onclick="toggleChat()">✦ Asistente Pixel Soy Rose</button>
+<div class="chat" id="chatBox" aria-label="Asistente virtual">
+  <div class="chat-head"><div><strong>✦ Asistente Pixel Soy Rose</strong><small>En línea · Atención inicial</small></div><button class="close" onclick="toggleChat()">✕</button></div>
+  <div class="messages" id="messages">
+    <div class="msg bot">¡Hola! 👋 Soy el asistente virtual de Pixel Soy Rose. Puedo orientarte sobre nuestros servicios y ayudarte a preparar una solicitud. ¿Qué estás buscando?</div>
+    <div class="msg bot">Puedes escribir: página web, logotipo, diseños, redes sociales o inteligencia artificial.</div>
+  </div>
+  <div class="chat-actions">
+    <input id="chatInput" type="text" placeholder="Escribe tu mensaje..." onkeydown="if(event.key==='Enter')sendChat()">
+    <button onclick="sendChat()">Enviar mensaje</button>
+    <button class="wa" onclick="sendToWhatsApp()">Continuar por WhatsApp</button>
+    <div class="chat-hint">El asistente brinda orientación inicial. La cotización y confirmación las realiza una persona.</div>
+  </div>
+</div>
+
+<script>
+/* EDITA AQUÍ LOS SERVICIOS, PRECIOS Y EL NÚMERO DE WHATSAPP.
+   WhatsApp debe escribirse con código de país, solo números.
+   México: 52 + número de 10 dígitos. Ejemplo de formato: 521234567890
+*/
+const WHATSAPP_NUMBER = "529161134542"; // REEMPLAZA por tu número real
+
+const services = [
+  {icon:"🌐",name:"Páginas web",desc:"Sitios modernos, adaptables a celular y computadora, para presentar tu negocio y conseguir clientes."},
+  {icon:"✦",name:"Logotipos e identidad",desc:"Diseño de logotipos, colores y elementos visuales para que tu marca sea reconocible."},
+  {icon:"🎨",name:"Diseño gráfico",desc:"Flyers, promociones, banners, menús, tarjetas y contenido visual para tu negocio."},
+  {icon:"📱",name:"Redes sociales",desc:"Planeación y creación de publicaciones para mantener activa la comunicación con tus clientes."},
+  {icon:"🤖",name:"Asistente con IA",desc:"Configuración de respuestas automáticas para preguntas frecuentes y atención inicial de mensajes."},
+  {icon:"📣",name:"Publicidad digital",desc:"Creatividades y campañas para dar visibilidad a tus productos y servicios en internet."}
+];
+const prices = [
+  {name:"Diseño de logotipo",price:"$1,200",unit:"por proyecto",desc:"Propuesta visual para iniciar o renovar tu marca."},
+  {name:"Paquete de diseños",price:"$900",unit:"desde",desc:"Diseños para promociones y publicaciones de tu negocio."},
+  {name:"Página web básica",price:"$3,500",unit:"desde",desc:"Sitio informativo adaptable a celulares y computadoras."},
+  {name:"Redes sociales",price:"$2,000",unit:"por mes · desde",desc:"Planeación y creación de contenido. Publicidad pagada no incluida."},
+  {name:"Asistente con IA",price:"$2,500",unit:"configuración inicial · desde",desc:"Automatización de preguntas frecuentes y mensajes iniciales. Servicios externos pueden tener costo."},
+  {name:"Paquete digital",price:"$5,900",unit:"desde",desc:"Combinación de página web, identidad visual y contenido inicial."}
+];
+document.getElementById("serviceCards").innerHTML = services.map(s=>`<article class="card"><div class="icon">${s.icon}</div><h3>${s.name}</h3><p>${s.desc}</p></article>`).join("");
+document.getElementById("priceCards").innerHTML = prices.map((p,i)=>`<article class="card"><div class="kicker">SERVICIO ${String(i+1).padStart(2,"0")}</div><h3 style="margin-top:10px">${p.name}</h3><p>${p.desc}</p><div class="price">${p.price} <small>${p.unit}</small></div><button class="btn secondary" style="margin-top:16px;width:100%" onclick="chooseService('${p.name}')">Solicitar información</button></article>`).join("");
+document.getElementById("year").textContent = new Date().getFullYear();
+
+let conversation = [];
+function toggleChat(){document.getElementById("chatBox").classList.toggle("open");}
+function openChat(){document.getElementById("chatBox").classList.add("open");document.getElementById("chatInput").focus();}
+function addMessage(text,who){const el=document.createElement("div");el.className="msg "+who;el.textContent=text;document.getElementById("messages").appendChild(el);document.getElementById("messages").scrollTop=999999;conversation.push((who==="user"?"Cliente: ":"Asistente: ")+text);}
+function chooseService(name){openChat();document.getElementById("chatInput").value="Me interesa: "+name;sendChat();}
+function sendChat(){
+  const input=document.getElementById("chatInput");const text=input.value.trim();if(!text)return;
+  addMessage(text,"user");input.value="";
+  const t=text.toLowerCase();
+  let reply="¡Claro! Cuéntame un poco más sobre tu negocio y qué resultado te gustaría conseguir. Así podremos orientarte mejor.";
+  if(t.includes("precio")||t.includes("costo")||t.includes("cuánto")) reply="Los precios publicados son referencias iniciales. El costo final depende de lo que necesites. Si me dices qué servicio te interesa, te ayudamos a preparar una cotización.";
+  else if(t.includes("página")||t.includes("web")) reply="¡Perfecto! Creamos páginas web para presentar servicios, mostrar productos y recibir solicitudes. ¿Tu negocio ya tiene nombre y logotipo?";
+  else if(t.includes("logo")||t.includes("logotipo")) reply="¡Con gusto! Diseñamos logotipos e identidad visual. ¿Cómo se llama tu negocio y a qué se dedica?";
+  else if(t.includes("diseño")||t.includes("flyer")||t.includes("volante")) reply="Podemos crear flyers, promociones, banners y publicaciones. ¿Qué tipo de diseño necesitas y para qué fecha?";
+  else if(t.includes("redes")||t.includes("facebook")||t.includes("instagram")) reply="Te podemos apoyar con contenido y administración de redes sociales. ¿En qué redes tienes presencia actualmente?";
+  else if(t.includes("ia")||t.includes("inteligencia")||t.includes("automát")||t.includes("bot")) reply="Podemos configurar un asistente para responder preguntas frecuentes y dar atención inicial. La automatización avanzada puede requerir plataformas externas. ¿En qué canal quieres atender mensajes?";
+  else if(t.includes("hola")||t.includes("buenas")) reply="¡Hola! Gracias por contactar a Pixel Soy Rose. ¿Qué servicio te interesa: página web, logotipo, diseños, redes sociales o asistente con IA?";
+  setTimeout(()=>addMessage(reply,"bot"),350);
+}
+function sendToWhatsApp(){
+  const valid=/^\d{10,15}$/.test(WHATSAPP_NUMBER) && !WHATSAPP_NUMBER.includes("X");
+  if(!valid){addMessage("Para activar WhatsApp, el administrador debe editar WHATSAPP_NUMBER en el código y colocar su número con código de país (solo números).","bot");return;}
+  const summary=conversation.slice(-10).join("\n");
+  const message="Hola, vi la página de Pixel Soy Rose y me gustaría recibir información.\n\nConversación:\n"+(summary||"Quisiera información sobre sus servicios.")+"\n\nQuedo pendiente. Gracias.";
+  window.open("https://wa.me/"+WHATSAPP_NUMBER+"?text="+encodeURIComponent(message),"_blank");
+  addMessage("¡Gracias por tu interés! En breve una persona de nuestro equipo se comunicará contigo para dar seguimiento. También puedes enviar tu solicitud por WhatsApp para continuar la atención.","bot");
+}
+</script>
+</body>
+</html>
